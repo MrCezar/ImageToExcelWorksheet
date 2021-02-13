@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30907.101
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageToExcelWorksheet", "ImageToExcelWorksheet.csproj", "{951CDEC1-F675-4970-BA44-A32AC49FCB9B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{951CDEC1-F675-4970-BA44-A32AC49FCB9B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{951CDEC1-F675-4970-BA44-A32AC49FCB9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{951CDEC1-F675-4970-BA44-A32AC49FCB9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{951CDEC1-F675-4970-BA44-A32AC49FCB9B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2E11920A-4E8F-4C78-96F5-2D3079333EC4}
+	EndGlobalSection
+EndGlobal
