@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using ImageToExcelWorksheet.ViewModel;
 
 namespace ImageToExcelWorksheet.View
 {
@@ -23,11 +24,10 @@ namespace ImageToExcelWorksheet.View
         public MainWindow()
         {
             InitializeComponent();
-        }
-
-        private void UIElement_OnMouseUp(object sender, MouseButtonEventArgs e)
-        {
-            MessageBox.Show($"You clicked at me {e.GetPosition(this)}");
+            MainWindowViewModel vm = new MainWindowViewModel();
+            DataContext = vm;
+            if (MainWindowViewModel.CloseAction == null)
+                MainWindowViewModel.CloseAction = Close;
         }
     }
 }

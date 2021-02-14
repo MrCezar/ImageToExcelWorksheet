@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using ImageToExcelWorksheet.View;
+using ImageToExcelWorksheet.ViewModel;
 
 namespace ImageToExcelWorksheet
 {
@@ -16,8 +17,16 @@ namespace ImageToExcelWorksheet
 
         private void btnOpenMainWindow_Click(object sender, RibbonControlEventArgs e)
         {
-            MainWindow mainWindow = new MainWindow();
-            mainWindow.Show();
+            //MainWindow mainWindow = new MainWindow();
+            //mainWindow.ShowDialog();
+            var vm = new MainWindowViewModel();
+            var mainWindow = new MainWindow()
+            {
+                DataContext = vm
+            };
+            vm.OnRequestClose += (s, x) => mainWindow.Close();
+
+            mainWindow.ShowDialog();
         }
     }
 }

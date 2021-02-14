@@ -12,7 +12,7 @@
         <viewModel:MainWindowViewModel x:Key="MainWindowViewModel"/>
     </Window.Resources>
 
-    <Grid Name="pnlMainGrid" DataContext="{StaticResource ResourceKey=MainWindowViewModel}" MouseUp="UIElement_OnMouseUp">
+    <Grid Name="pnlMainGrid" DataContext="{StaticResource ResourceKey=MainWindowViewModel}">
         <Grid.RowDefinitions>
             <RowDefinition Height="7*"/>
             <RowDefinition Height="3*"/>
@@ -31,7 +31,7 @@
                     <RowDefinition Height="2.5*"/>
                 </Grid.RowDefinitions>
 
-                <TextBox Grid.Row="1" Height="23" Margin="0" TextWrapping="Wrap" Text="Path" VerticalAlignment="Center" IsEnabled="False" Padding="0" HorizontalAlignment="Right" Width="190"/>
+                <TextBox Grid.Row="1" Height="23" Margin="0" Text="{Binding Path}" VerticalAlignment="Center" Padding="0" HorizontalAlignment="Right" Width="190" IsReadOnly="True" TextAlignment="Justify" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
             </Grid>
             
             <Grid Grid.Column="1">
@@ -41,11 +41,11 @@
                     <RowDefinition Height="2.5*"/>
                 </Grid.RowDefinitions>
 
-                <Button Grid.Row="1" Content="Search Path" Margin="0" Width="75" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                <Button Grid.Row="1" Content="Search Path" Margin="0" Width="75"  Height="23" VerticalAlignment="Center" HorizontalAlignment="Center" Command="{Binding OpenSearchFile}"/>
             </Grid>
         </Grid>
 
-        <Button Grid.Row="1" Width="45
-                " Height="20" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="0,0,10,10" IsEnabled="False" Content="Convert"/>
+        <Button Grid.Row="1" Width="75
+                " Height="20" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="0,0,5,10" Content="Convert" Command="{Binding CanExecuteCommand}"/>
     </Grid>
 </Window>

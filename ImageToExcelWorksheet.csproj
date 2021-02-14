@@ -160,6 +160,7 @@
     can be found.
   -->
   <ItemGroup>
+    <Compile Include="Entities\ImageHandler.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -169,6 +170,7 @@
     <Compile Include="Ribbon.Designer.cs">
       <DependentUpon>Ribbon.cs</DependentUpon>
     </Compile>
+    <Compile Include="Utils\RelayCommand.cs" />
     <Compile Include="ViewModel\MainWindowViewModel.cs" />
     <Compile Include="View\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
